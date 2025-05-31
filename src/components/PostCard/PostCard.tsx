@@ -37,7 +37,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function PostCard({ postInfo, showComment = false }: { postInfo: Post, showComment: boolean }) {
+export default function PostCard({ postInfo, showComment = false }: { postInfo: Post, showComment?: boolean }) {
   const dispatch = useAPPDispatch();
   const commentContent = useAPPSelector((store) => store.commentReducer.commentContent);
 
