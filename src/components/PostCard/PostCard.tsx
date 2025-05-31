@@ -6,19 +6,13 @@ import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import CommentIcon from '@mui/icons-material/Comment';
 import SendIcon from '@mui/icons-material/Send';
-import { red } from '@mui/material/colors';
-
 import { Post } from '@/types/posts.types';
 import Comments from '../Comments/Comments';
 import { Box, Button, Divider, TextField } from '@mui/material';
@@ -64,7 +58,7 @@ export default function PostCard({ postInfo, showComment = false }: { postInfo: 
   };
 
   return (
-    <Card sx={{ Width: "75%", mx: "auto", mt: 5 }}>
+    <Card sx={{ width: "75%", mx: "auto", mt: 5 }}>
       <CardHeader
         avatar={
           <Image src={postInfo.user?.photo} width={50} height={50} alt="avatar" />
@@ -139,7 +133,7 @@ export default function PostCard({ postInfo, showComment = false }: { postInfo: 
             variant="text"
             endIcon={<SendIcon />}
             onClick={handleAddComment}
-          />
+          >  </Button>
         </Box>
       </Box>
     </Card>

@@ -1,17 +1,13 @@
 'use client'
 import { Box, Button, Paper, TextField } from '@mui/material'
-import { lime } from '@mui/material/colors'
 import React from 'react'
 import {useFormik} from "formik"
 import { login } from '@/store/feature/user.slice'
-
-import { RootType } from '@/store/store'
-import { useAPPDispatch, useAPPSelector } from '@/hooks/store.hook'
-import { log } from 'node:console'
+import { useAPPDispatch } from '@/hooks/store.hook'
 import { useRouter } from 'next/navigation'
 
 
-export default function page() {
+export default function Page() {
     const dispatch = useAPPDispatch()
     const router =useRouter()
 
@@ -36,7 +32,7 @@ export default function page() {
     })
 
 
-  return ( 
+return ( 
     <>
     <Box sx={{width:"600px" ,mx:"auto",p:2}}>
         <Paper elevation={3} sx={{p:5 , mt:5}}>

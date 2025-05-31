@@ -1,46 +1,13 @@
 import { Box, CardHeader, IconButton, Typography } from '@mui/material'
 import Image from 'next/image'
-import React, { useRef } from 'react'
 import MoreVertIcon from "@mui/icons-material/MoreVert"
 import { Comment } from '@/types/posts.types'
 import pic from "../../../public/user.png"
-import { log } from 'console'
 import { useAPPSelector } from '@/hooks/store.hook'
-import axios from 'axios'
+
 
 
 export default function Comments({commentInfo}:{commentInfo:Comment}) {
-
-
-let {token} = useAPPSelector((store)=>store.userReducer)
-
-let {postId} = useAPPSelector((store)=>store.postsReducer)
-
-
-// async function createComment(){
-
-    
-
-
-
-//     const options={
-//         url:`https://linked-posts.routemisr.com/comments`,
-//         method:"POST",
-//         headers:{
-//             token
-//         },
-//           data: {
-//     postId: postId,
-//     content: content
-//   }
-//     }
-
-//     const {data} =await axios.request(options)
-//     console.log(data);
-    
-    
-// }
-
 
 
 function handelImage(path:string){
@@ -58,7 +25,7 @@ function handelImage(path:string){
           <CardHeader
         avatar={
           <Image src={handelImage(commentInfo.commentCreator.photo)}
-             width={30} height={30}/>
+             width={30} height={30} alt="User profile"/>
         }
         action={
           <IconButton aria-label="settings">

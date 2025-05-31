@@ -2,9 +2,7 @@ import { Box, Button, TextField } from '@mui/material'
 import React, { useRef } from 'react'
 import SendIcon from '@mui/icons-material/Send';
 import { styled } from '@mui/material/styles';
-
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { url } from 'inspector';
 import { useAPPSelector } from '@/hooks/store.hook';
 import axios from 'axios';
 
@@ -21,7 +19,7 @@ export default function Form() {
       width: 1,
     });
 
-let {token} = useAPPSelector((store)=>store.userReducer)
+const {token} = useAPPSelector((store)=>store.userReducer)
 
 const heading=useRef(null)
 const file=useRef(null)
