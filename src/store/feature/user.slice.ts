@@ -1,7 +1,7 @@
 import { userState } from "@/types/user.types";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { log } from "node:console";
+
 import toast from "react-hot-toast";
 const initialState:userState={
     token:localStorage.getItem("token")
@@ -12,7 +12,7 @@ export const login= createAsyncThunk('user/Login' , async (values:{email:string 
         method:"post", 
         data:values,
     }
-    let {data} =await axios.request(options)
+    const {data} =await axios.request(options)
     console.log(data);
     return data;
     
