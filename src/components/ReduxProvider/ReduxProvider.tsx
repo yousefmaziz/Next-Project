@@ -5,7 +5,7 @@ import {  ReactNode } from "react";
 import { Provider } from "react-redux";
 
 
-export default function ReduxProvider({children}: {childern: ReactNode}) {
+export default function ReduxProvider({children}: {children: ReactNode}) {
   return <>
   <Provider store={store}> 
     {children}
