@@ -1,7 +1,7 @@
 import { postsState } from "@/types/posts.types";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { log } from "console";
+
 
 import toast from "react-hot-toast";
 
@@ -27,7 +27,7 @@ export const getPosts= createAsyncThunk('posts/getPosts' , async (_,{getState})=
         },
         
     }
-    let {data} =await axios.request(options)
+    const {data} =await axios.request(options)
     console.log(data);
     return data.posts;
     
@@ -50,7 +50,7 @@ export const getPostDetails= createAsyncThunk('posts/getPostDetails' , async (id
         },
         
     }
-    let {data} =await axios.request(options)
+    const {data} =await axios.request(options)
     console.log(data.post);
     return data.post;
     

@@ -8,7 +8,7 @@ import { Box } from '@mui/material'
 import React, { use, useEffect } from 'react'
 
 
-export default function page({params}:{params: Promise<{postId: string}>}) {
+export default function Page({params}:{params: Promise<{postId: string}>}) {
 
     const {postId} = use(params)
     const dispatch = useAPPDispatch()
@@ -17,7 +17,7 @@ export default function page({params}:{params: Promise<{postId: string}>}) {
        dispatch(getPostDetails(postId))
     },[])
     
-let   {PostDetails}  = useAPPSelector((store)=>store.postsReducer)
+const   {PostDetails}  = useAPPSelector((store)=>store.postsReducer)
   return (
     <>
     <Box sx={{width:"60%" , mx:"auto"}}>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import MoreVertIcon from "@mui/icons-material/MoreVert"
 import { Comment } from '@/types/posts.types'
 import pic from "../../../public/user.png"
-import { useAPPSelector } from '@/hooks/store.hook'
+
 
 
 

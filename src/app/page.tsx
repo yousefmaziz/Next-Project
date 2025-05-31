@@ -3,13 +3,13 @@ import Form from "@/components/Form/Form";
 import Loading from "@/components/Loading/Loading";
 import PostCard from "@/components/PostCard/PostCard";
 import { useAPPDispatch, useAPPSelector } from "@/hooks/store.hook";
-import { getPosts, posts } from "@/store/feature/posts.slice";
+import { getPosts  } from "@/store/feature/posts.slice";
 import { Box } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import { useEffect } from "react";
 export default function Home() {
 
-  let {posts} =useAPPSelector((store)=>store.postsReducer)
+  const {posts} =useAPPSelector((store)=>store.postsReducer)
 
   const dispatch= useAPPDispatch()
 
