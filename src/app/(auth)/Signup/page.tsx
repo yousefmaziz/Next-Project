@@ -18,7 +18,7 @@ const formik = useFormik({
     email: "",
     password: "",
     rePassword: "",
-    dateOfBirth: "",
+    dateOfBirth:new Date (""),
     gender: ""
   },
   onSubmit: (values, { resetForm }) => {
@@ -26,7 +26,7 @@ const formik = useFormik({
       console.log({ response });
 
       if (response.payload.message === "success") {
-        resetForm(); // ✅ تفضية الحقول بعد نجاح التسجيل
+        resetForm();
 
         setTimeout(() => {
           router.push("/Login");
