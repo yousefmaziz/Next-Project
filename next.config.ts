@@ -1,18 +1,16 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-        eslint: {
+const nextConfig = {
+  eslint: {
     ignoreDuringBuilds: true,
   },
-  images:{ 
-    remotePatterns:[
+  images: {
+    remotePatterns: [
       {
-        protocol:"https",
-        hostname:"linked-posts.routemisr.com",
-        pathname:"/uploads/**"
-      }
-    ]
-  }
+        protocol: "https",
+        hostname: "linked-posts.routemisr.com",
+        pathname: "/uploads/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

@@ -11,17 +11,16 @@ export default function Page() {
     const dispatch = useAPPDispatch()
     const router =useRouter()
 
-    // useAPPSelector((store)=>store.userReducer)
-
     const formik= useFormik ({
         initialValues:{
             email:"",
             password:""
         },
-        onSubmit: (values)=>{
+        onSubmit: (values, { resetForm })=>{
             dispatch(login(values)).then((response)=>{
                 console.log({response});
                 if(response.payload.message == "success"){
+                    resetForm()
                     setTimeout(()=>{
                         router.push("/")
                     },1000)

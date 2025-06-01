@@ -1,12 +1,12 @@
 'use client';
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -23,19 +23,19 @@ import Image from 'next/image';
 import { addComments, setCommentContent } from '@/store/feature/comment.slice';
 import { useAPPDispatch, useAPPSelector } from '@/hooks/store.hook';
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
+// interface ExpandMoreProps extends IconButtonProps {
+//   expand: boolean;
+// }
 
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme }) => ({
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
+// const ExpandMore = styled((props: ExpandMoreProps) => {
+//   const { expand, ...other } = props;
+//   return <IconButton {...other} />;
+// })(({ theme }) => ({
+//   marginLeft: 'auto',
+//   transition: theme.transitions.create('transform', {
+//     duration: theme.transitions.duration.shortest,
+//   }),
+// }));
 
 export default function PostCard({ postInfo, showComment = false }: { postInfo: Post, showComment?: boolean }) {
   const dispatch = useAPPDispatch();
@@ -58,7 +58,7 @@ export default function PostCard({ postInfo, showComment = false }: { postInfo: 
   };
 
   return (
-    <Card sx={{ width: "75%", mx: "auto", mt: 5 }}>
+    <Card sx={{ width: "100%", mx: "auto", mt: 5 }}>
       <CardHeader
         avatar={
           <Image src={postInfo.user?.photo} width={50} height={50} alt="avatar" />

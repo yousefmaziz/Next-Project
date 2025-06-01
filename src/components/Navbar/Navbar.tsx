@@ -143,6 +143,11 @@ export default function Navbar() {
 
 
     <MenuItem>
+        <Link href={'/Signup'} className={currentPath=="/Signup" ? "active " : ""}>
+            Signup
+        </Link>
+    </MenuItem>
+    <MenuItem>
         <Link href={'/Login'} className={currentPath=="/Login" ? "active " : ""}>
             Login
         </Link>

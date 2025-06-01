@@ -6,6 +6,17 @@ import toast from "react-hot-toast";
 const initialState:userState={
     token:localStorage.getItem("token")
 }
+export const signup= createAsyncThunk('user/Signup' , async (values:{name:string, email:string , password:string, rePassword:string,dateOfBirth:Date,gender:string})=>{
+    const options = {
+        url: `https://linked-posts.routemisr.com/users/signup`,
+        method:"post", 
+        data:values,
+    }
+    const {data} =await axios.request(options)
+    console.log(data);
+    return data;
+    
+})
 export const login= createAsyncThunk('user/Login' , async (values:{email:string , password:string})=>{
     const options = {
         url: `https://linked-posts.routemisr.com/users/signin`,
@@ -33,7 +44,7 @@ const userSlice=createSlice({
         
         builder.addCase(login.rejected, (state , action)=> {
             toast.error("Incorrect email or password")
-             console.log("Login error:", action.error);
+            console.log("Login error:", action.error);
             
         });
     },
