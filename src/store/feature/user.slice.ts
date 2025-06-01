@@ -3,9 +3,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 import toast from "react-hot-toast";
-const initialState:userState={
-    token:localStorage.getItem("token")
-}
+const initialState: userState = {
+  token: typeof window !== "undefined" ? localStorage.getItem("token") : null
+};
+
 export const signup= createAsyncThunk('user/Signup' , async (values:{name:string, email:string , password:string, rePassword:string,dateOfBirth:Date,gender:string})=>{
     const options = {
         url: `https://linked-posts.routemisr.com/users/signup`,
