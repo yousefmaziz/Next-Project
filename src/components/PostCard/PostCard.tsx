@@ -69,7 +69,7 @@ export default function PostCard({ postInfo, showComment = false }: { postInfo: 
           </IconButton>
         }
         title={postInfo.user.name}
-        subheader={postInfo.createdAt}
+        subheader={postInfo.createMat}
       />
 
       <CardContent>

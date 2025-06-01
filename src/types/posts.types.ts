@@ -2,7 +2,7 @@
 export type postsState = {
     posts: null | Post[],
     PostDetails:null | Post
-
+    
 }
 
 

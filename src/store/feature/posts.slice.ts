@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 const initialState:postsState={
     posts:null,
-    getPostDetails:null
+    PostDetails:null
 }
 
 
