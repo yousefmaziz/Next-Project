@@ -21,8 +21,8 @@ export default function Form() {
 
 const {token} = useAPPSelector((store)=>store.userReducer)
 
-const heading=useRef(null)
-const file=useRef(null)
+const heading = useRef<HTMLInputElement>(null);
+const file = useRef<HTMLInputElement>(null);
 
 
 
