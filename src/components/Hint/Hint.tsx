@@ -21,7 +21,7 @@ return (
           alignItems: "center",    
           textAlign: "center",
           justifyContent: "center", 
-          height: "50vh",        
+          height: "100vh",        
           gap: 2,
           bgcolor:"white"                  
 }}

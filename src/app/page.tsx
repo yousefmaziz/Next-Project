@@ -50,7 +50,7 @@ useEffect(() => {
   
   return (
     <>
-    <Box sx={{mt:3 ,bgcolor:"white"}}>
+    <Box sx={{bgcolor:"white"}}>
   <Grid container spacing={1} sx={{bgcolor:'white'}}>
   <Grid size={{ xs: 12, md: 3 }} sx={{bgcolor:'white'}}></Grid>
   <Grid size={{ xs: 12, md: 6 }} sx={{p:1, bgcolor:'white'}}>
