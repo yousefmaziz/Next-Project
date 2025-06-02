@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, Paper, TextField } from '@mui/material'
+import { Box, Button, Grid, Paper, TextField } from '@mui/material'
 import React from 'react'
 import {useFormik} from "formik"
 import { login } from '@/store/feature/user.slice'
@@ -33,8 +33,11 @@ export default function Page() {
 
 return ( 
     <>
-    <Box sx={{width:"600px" ,mx:"auto",p:2}}>
-        <Paper elevation={3} sx={{p:5 , mt:5}}>
+    <Box sx={{width:"100%" ,mx:"auto",p:2 ,bgcolor:"white"}}>
+            <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 3 }}></Grid>
+            <Grid size={{ xs: 12, md: 6 }}>
+            <Paper elevation={3} sx={{p:5 , my:5}}>
     <form 
     onSubmit={formik.handleSubmit}
         style={{display:"flex", flexDirection:"column", gap:"15px"}} >
@@ -53,6 +56,8 @@ return (
         <Button type='submit' variant="contained">login</Button>
     </form>
         </Paper>
+</Grid>
+        </Grid>
     </Box>
     </>
   )

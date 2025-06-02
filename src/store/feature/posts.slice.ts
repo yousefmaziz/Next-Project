@@ -57,9 +57,6 @@ export const getPostDetails= createAsyncThunk('posts/getPostDetails' , async (id
 })
 
 
-
-
-
 const postSlice = createSlice({
     name:"posts",
     initialState,

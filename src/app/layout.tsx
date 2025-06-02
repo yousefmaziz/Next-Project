@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import {Toaster} from "react-hot-toast"
 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
