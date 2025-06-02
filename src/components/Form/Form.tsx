@@ -60,7 +60,7 @@ async function createPost(){
 
     </TextField>
     
-    <Box sx={{display:'flex',justifyContent:'space-between' ,mt:2}}>
+    <Box sx={{display:'flex',justifyContent:'space-between' ,mt:2 , bgcolor:"white"}}>
     <Button
       component="label"
       role={undefined}

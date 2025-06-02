@@ -39,7 +39,7 @@ const formik = useFormik({
 
   return (
   <>
-    <Box sx={{width:"100%" ,mx:"auto",p:2 ,bgcolor:"white"}}>
+    <Box sx={{width:"100%" ,mx:"auto",p:2 ,bgcolor:"white" ,height:"100vh"}}>
     <Grid container spacing={2}>
       <Grid size={{ xs: 12, md: 3 }}></Grid>
       <Grid size={{ xs: 12, md: 6 }}>

@@ -27,11 +27,15 @@ useEffect(() => {
       if (token) {
         dispatch(getPosts());
       } else {
-        router.push("/Login");
+        setTimeout(()=>{
+                        router.push("/Login")
+                    },1000)
       }
     })
     .catch(() => {
-      router.push("/Login");
+      setTimeout(()=>{
+                        router.push("/Login")
+                    },1000)
     });
 }, []);
 
