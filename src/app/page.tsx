@@ -21,18 +21,19 @@ export default function Home() {
   const router =useRouter()
 
 useEffect(() => {
-    dispatch(checkAuth()).then((res) => {
-      const {token} = res.payload;
-
+  dispatch(checkAuth())
+    .unwrap()
+    .then(({ token }) => {
       if (token) {
         dispatch(getPosts());
       } else {
-        setTimeout(() => {
-          router.push("/Login");
-        }, 1000);
+        router.push("/Login");
       }
+    })
+    .catch(() => {
+      router.push("/Login");
     });
-  }, []);
+}, []);
 
 
 

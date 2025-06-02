@@ -3,3 +3,4 @@ export type userState = {
   user: null | Record<string, any>;
   isUserChecked: boolean;
 };
+
