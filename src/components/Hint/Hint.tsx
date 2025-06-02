@@ -22,7 +22,8 @@ return (
           textAlign: "center",
           justifyContent: "center", 
           height: "50vh",        
-          gap: 2,                  
+          gap: 2,
+          bgcolor:"white"                  
 }}
 >
 

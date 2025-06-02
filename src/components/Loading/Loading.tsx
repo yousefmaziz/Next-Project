@@ -12,8 +12,9 @@ export default function Loading() {
           alignItems: "center",    
           textAlign: "center",
           justifyContent: "center", 
-          height: "50vh",        
-          gap: 2,                  
+          height: "100vh",        
+          gap: 2, 
+          bgcolor:"white"               
         }}
       >
 
