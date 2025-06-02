@@ -7,11 +7,11 @@ import { getPostDetails } from '@/store/feature/posts.slice'
 import { checkAuth } from '@/store/feature/user.slice'
 import { Box, Grid } from '@mui/material'
 import { useRouter } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React, { use, useEffect } from 'react'
 
 
-export default function Page({ params }: { params: { postId: string } }) {
-  const { postId } = params;
+export default function Page({params}:{params: Promise<{postId: string}>}) {
+    const {postId} = use(params)
   const dispatch = useAPPDispatch();
   const router = useRouter();
 
